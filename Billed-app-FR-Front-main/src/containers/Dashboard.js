@@ -87,7 +87,7 @@ export default class {
   }
 
   handleEditTicket(e, bill, bills , index) {
-    if ( this.id !== bill.id || this.counter[index] == 1) this.counter[index] = 0
+    if ( this.id !== bill.id && this.counter[index]%2 != 0) this.counter[index] = 0
     if ( this.id !== bill.id) this.id = bill.id
     if (this.counter[index] == 0) {
       bills.forEach(b => {
