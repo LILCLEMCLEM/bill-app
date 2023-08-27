@@ -58,11 +58,12 @@ const row = (bill) => {
 
 
 const rows = (data) => { //parse la date pour trier par date
-  data.forEach(element => {
+  data?.forEach(element => {
+    console.log(element.date)
     parseDate(element.date)
   });
 
-  data.sort((a , b) => {
+  data?.sort((a , b) => {
     return a.date > b.date ? -1 : 1;
   })
   
