@@ -282,10 +282,10 @@ describe("Given I am a user connected as Admin", () => {
             return Promise.reject(new Error("Erreur 404"))
           }
         }})
-      window.onNavigate(ROUTES_PATH.Dashboard)
+      window.onNavigate(ROUTES_PATH.Dashboard);
       await new Promise(process.nextTick);
-      const message = await screen.getByText(/Erreur 404/)
-      expect(message).toBeTruthy()
+      const message = await screen.getByText(/Erreur 404/);
+      expect(message).toBeTruthy();
     })
 
     test("fetches messages from an API and fails with 500 message error", async () => {

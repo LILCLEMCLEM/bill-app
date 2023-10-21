@@ -59,7 +59,6 @@ const row = (bill) => {
 
 const rows = (data) => { //parse la date pour trier par date
   data?.forEach(element => {
-    console.log(element.date)
     parseDate(element.date)
   });
 
